@@ -14,7 +14,7 @@
             <th>Surname</th>
         </tr>
         <?php
-        $mysqli = new mysqli("db", "user", "password", "appDB");
+        $mysqli = new mysqli("db", "mysql", "123456", "app_db");
         $result = $mysqli->query("SELECT * FROM users");
         foreach ($result as $row) {
             echo "<tr><td>{$row['ID']}</td><td>{$row['name']}</td><td>{$row['surname']}</td></tr>";
