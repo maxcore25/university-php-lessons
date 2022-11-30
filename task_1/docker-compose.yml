@@ -28,4 +28,4 @@ services:
       PMA_HOST: ${PMA_HOST}
       PMA_PORT: ${PMA_PORT}
     ports:
-      - 8888:80
+      - '8888:80'
