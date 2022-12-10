@@ -24,24 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `product`
+-- Структура таблицы `books`
 --
 
-CREATE TABLE `product` (
+CREATE TABLE `books` (
   `id` int NOT NULL,
   `name` varchar(256) NOT NULL,
-  `price` int NOT NULL
+  `amount` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Дамп данных таблицы `product`
+-- Дамп данных таблицы `books`
 --
 
-INSERT INTO `product` (`id`, `name`, `price`) VALUES
-(1, 'Latte', 100),
-(2, 'Raf', 90),
-(3, 'Americano', 110),
-(4, 'Capucino', 120);
+INSERT INTO `books` (`id`, `name`, `amount`) VALUES
+(1, 'Дубровский', 1000),
+(2, 'Мцыри', 900),
+(3, 'Война и мир', 1100),
+(4, 'Идиот', 1200);
 
 -- --------------------------------------------------------
 
@@ -80,18 +80,18 @@ CREATE TABLE `vacancy` (
 --
 
 INSERT INTO `vacancy` (`id`, `name`, `salary`) VALUES
-(1, 'Barista', 40000),
-(2, 'Manager', 50000),
-(3, 'Cleaner', 30000);
+(1, 'Guardian', 30000),
+(2, 'Librarian', 40000),
+(3, 'Manager', 50000);
 
 --
 -- Индексы сохранённых таблиц
 --
 
 --
--- Индексы таблицы `product`
+-- Индексы таблицы `books`
 --
-ALTER TABLE `product`
+ALTER TABLE `books`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -111,9 +111,9 @@ ALTER TABLE `vacancy`
 --
 
 --
--- AUTO_INCREMENT для таблицы `product`
+-- AUTO_INCREMENT для таблицы `books`
 --
-ALTER TABLE `product`
+ALTER TABLE `books`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
