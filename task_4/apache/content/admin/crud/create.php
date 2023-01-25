@@ -8,10 +8,10 @@ if (isset($_GET['name']) && isset($_GET['type'])) {
             $mysqli = new mysqli("db", "mysql", "123456", "app_db");
             $result = $mysqli->query("INSERT INTO $type VALUES (Null, '$name', '$salary')");
             break;
-        case 'product':
-            $price = $_GET['price'];
+        case 'book':
+            $amount = $_GET['amount'];
             $mysqli = new mysqli("db", "mysql", "123456", "app_db");
-            $result = $mysqli->query("INSERT INTO $type VALUES (Null, '$name', '$price')");
+            $result = $mysqli->query("INSERT INTO $type VALUES (Null, '$name', '$amount')");
             break;
     }
     header("Location: /admin/admin.php");

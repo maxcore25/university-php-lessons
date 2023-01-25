@@ -45,17 +45,17 @@
         $result = $mysqli->query("SELECT * FROM $type WHERE id = $id");
         $result = $result->fetch_assoc();
         switch ($type) {
-            case 'product':
+            case 'book':
                 echo "
                     <div class='d-flex flex-column min-vh-100 justify-content-center align-items-center'>
                         <form action='/admin/crud/update.php' method='GET'>
                             <div class='mb-3'>
-                                <label for='name' class='form-label'>Product name</label>
-                                <input name='name' type='text' class='form-control' id='name' placeholder='Capuccino' value={$result['name']}>
+                                <label for='name' class='form-label'>Book name</label>
+                                <input name='name' type='text' class='form-control' id='name' placeholder='Book' value={$result['name']}>
                             </div>
                             <div class='mb-3'>
-                                <label for='price' class='form-label'>Product price</label>
-                                <input name='price' type='number' class='form-control' id='price' placeholder='119' value={$result['price']}>
+                                <label for='amount' class='form-label'>Book amount</label>
+                                <input name='amount' type='number' class='form-control' id='amount' placeholder='119' value={$result['amount']}>
                             </div>
                             <input type='hidden' name='id' value='$id'>
                             <input type='hidden' name='type' value='$type'>
@@ -70,7 +70,7 @@
                             <form action='/admin/crud/update.php' method='GET'>
                                 <div class='mb-3'>
                                     <label for='name' class='form-label'>Vacancy name</label>
-                                    <input name='name' type='text' class='form-control' id='name' placeholder='Capuccino' value={$result['name']}>
+                                    <input name='name' type='text' class='form-control' id='name' placeholder='Worker' value={$result['name']}>
                                 </div>
                                 <div class='mb-3'>
                                     <label for='salary' class='form-label'>Vacancy salary</label>

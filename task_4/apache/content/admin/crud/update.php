@@ -9,10 +9,10 @@ if (isset($_GET['name']) && isset($_GET['type']) && isset($_GET['id'])) {
             $mysqli = new mysqli("db", "mysql", "123456", "app_db");
             $result = $mysqli->query("UPDATE $type SET `name` = '$name', salary = '$salary' WHERE id = $id");
             break;
-        case 'product':
-            $price = $_GET['price'];
+        case 'book':
+            $amount = $_GET['amount'];
             $mysqli = new mysqli("db", "mysql", "123456", "app_db");
-            $result = $mysqli->query("UPDATE $type SET `name` = '$name', price = '$price' WHERE id = $id");
+            $result = $mysqli->query("UPDATE $type SET `name` = '$name', amount = '$amount' WHERE id = $id");
             break;
     }
     header("Location: /admin/admin.php");

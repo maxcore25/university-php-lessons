@@ -41,14 +41,14 @@
     <div class="row">
       <?php
       $mysqli = new mysqli("db", "mysql", "123456", "app_db");
-      $result = $mysqli->query("SELECT * FROM product");
+      $result = $mysqli->query("SELECT * FROM books");
       foreach ($result as $row) {
         echo "
         <div class='col'>
           <div class='card' style='width: 18rem;'>
             <div class='card-body'>
               <h5 class='card-title'>{$row["name"]}</h5>
-              <h6 class='card-subtitle mb-2 text-muted'>{$row['price']}</h6>
+              <h6 class='card-subtitle mb-2 text-muted'>{$row['amount']}</h6>
               <p class='card-text'>Lorem ipsum dolor sit amet.</p>
             </div>
           </div>

@@ -41,17 +41,17 @@
     if (isset($_GET['type'])) {
         $type = $_GET['type'];
         switch ($type) {
-            case 'product':
+            case 'book':
                 echo "
                     <div class='d-flex flex-column min-vh-100 justify-content-center align-items-center'>
                         <form action='/admin/crud/create.php' method='GET'>
                             <div class='mb-3'>
-                                <label for='name' class='form-label'>Product name</label>
-                                <input name='name' type='text' class='form-control' id='name' placeholder='Capuccino'>
+                                <label for='name' class='form-label'>Book name</label>
+                                <input name='name' type='text' class='form-control' id='name' placeholder='Book'>
                             </div>
                             <div class='mb-3'>
-                                <label for='price' class='form-label'>Product price</label>
-                                <input name='price' type='number' class='form-control' id='price' placeholder='119'>
+                                <label for='amount' class='form-label'>Book amount</label>
+                                <input name='amount' type='number' class='form-control' id='amount' placeholder='119'>
                             </div>
                             <input type='hidden' name='type' value='$type'>
                             <button type='submit' class='btn btn-primary'>Change</button>
@@ -65,7 +65,7 @@
                             <form action='/admin/crud/create.php' method='GET'>
                                 <div class='mb-3'>
                                     <label for='name' class='form-label'>Vacancy name</label>
-                                    <input name='name' type='text' class='form-control' id='name' placeholder='Barista'>
+                                    <input name='name' type='text' class='form-control' id='name' placeholder='Worker'>
                                 </div>
                                 <div class='mb-3'>
                                     <label for='salary' class='form-label'>Vacancy salary</label>
